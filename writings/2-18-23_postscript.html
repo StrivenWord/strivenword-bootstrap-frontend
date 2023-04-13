@@ -79,9 +79,33 @@
 
       <div class="col-md-6">
         <!-- tags & maybe archive list will go here -->
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#taglist">
+          Tags
+        </button>
+      </div>
+
+      <div class="modal fade" id="taglist" tabindex="-1" aria-labelledby="taglistLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="taglistLabel">Tags</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <ul>
+                <li>poetry</li>
+                <li>elves</li>
+                <li>Easter</li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
 
     </div>
+
 
   </main>
 
