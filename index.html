@@ -13,21 +13,21 @@
 
 </head>
 
-    <!-- Favicons -->
-<link rel="apple-touch-icon" href="https://getbootstrap.com/docs/5.3/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
-<link rel="icon" href="https://getbootstrap.com/docs/5.3/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
-<link rel="icon" href="https://getbootstrap.com/docs/5.3/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
-<link rel="manifest" href="https://getbootstrap.com/docs/5.3/assets/img/favicons/manifest.json">
-<link rel="mask-icon" href="https://getbootstrap.com/docs/5.3/assets/img/favicons/safari-pinned-tab.svg" color="#712cf9">
-<link rel="icon" href="https://getbootstrap.com/docs/5.3/assets/img/favicons/favicon.ico">
+    <!-- Favicons
+      -- Icon is a PNG file made out of the Bootstrap "type" icon from the free Bootstrap set(modified). It uses two colors: default light blue from the default Bootstrap color theme as the 'primary' color (#0d6efd), and bright red from the 'danger' color (#dc3545).
+     -->
+<link rel="icon" href="./favicon.png">
+<link rel="icon" href="./favicon.svg" sizes="any">
 
-<meta name="theme-color" content="#712cf9">
+<meta name="theme-color" content="#ffc107"> <!-- theme color is the Bootstrap color for 'warning' -->
 
 
     <style>
         .bd-placeholder-img {
             background-image: url(img/forest-watercolor-vlntn.jpg);
-            background-position: center;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
             font-size: 1.125rem;
             text-anchor: middle;
             -webkit-user-select: none;
@@ -77,6 +77,28 @@
             white-space: nowrap;
             -webkit-overflow-scrolling: touch;
           }
+
+        main > img:first-of-type {
+            max-width: 320px;
+            min-width: 100px;
+        }
+        main > img:last-of-type {
+            max-width: 200px;
+            min-width: 100px;
+        }
+
+        main a:hover, main a:hover:visited {
+            color: #ffc107; /* bs-warning */
+        }
+        main a:focus, main a:focus:visited {
+            color: #198754; /* bs-success */
+        }
+        main a:visited {
+            color: #0dcaf0; /* bs-info */
+        }
+        main a:hover, main a:focus {
+            text-decoration: none;
+        }
     </style>
 
 
@@ -86,39 +108,87 @@
 
 <body class="d-flex h-100 text-center text-bg-dark bd-placeholder-img">
     
-<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-  <header class="mb-auto">
-    <div>
-    <h3 class="float-md-start mb-0">The Striven Word</h3>
-<!--
-        <nav class="nav nav-masthead justify-content-center float-md-end">
-            <a class="nav-link fw-bold py-1 px-0 active" aria-current="page" href="https://getbootstrap.com/docs/5.3/examples/cover/#">Home</a>
-            <a class="nav-link fw-bold py-1 px-0" href="https://getbootstrap.com/docs/5.3/examples/cover/#">Features</a>
-            <a class="nav-link fw-bold py-1 px-0" href="https://getbootstrap.com/docs/5.3/examples/cover/#">Contact</a>
-        </nav>
--->
-    </div>
-  </header>
+</header>
 
+<div class="d-flex flex-column h-100 w-100"> <!-- begin header-footer container -->
+
+<header class="header mb-auto">
+    <nav class="navbar navbar-expand bg-light mb-3">
+        <div class="container-fluid">
+            <h3 class="navbar-brand mb-0 h3">The Striven Word</h3>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item mx-1"><a href="#">Blog</a></li>
+                    <li class="nav-item mx-1"><a href="#">Stories</a></li>
+                    <li class="nav-item mx-1"><a href="#">Poems</a></li>
+                    <li class="nav-item mx-1"><a href="#">Reviews</a></li>
+                    <li class="nav-item mx-1"><a href="#">Links</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<div class="cover-container d-flex w-100 h-100 p-3 mx-auto mt-auto"> <!-- begin main content wrapper -->
+
+
+<!-- commenting out content
 <main class="px-6">
-    <ul class="list-group">
-        <li class="list-group-item">
+    <img src="img/strivenword.png" alt="A sword within an infinity symbol">
+    <nav class="list-group py-2 py-md-4 mx-5">
+        <div class="list-group-item bg-dark">
             <a href="https://www.transcendentdestinies.net/" class="stretched-link">Reviews</a>
-        </li>
-        <li class="list-group-item">
+        </div>
+        <div class="list-group-item bg-dark">
             <a href="https://twitter.com/strivenword" class="stretched-link">Twitter</a>
-        </li>
-    </ul>
+        </div>
+        <div class="list-group-item bg-dark">
+            <a href="#" class="stretched-link">(Here)</a>
+        </div>
+    </nav>
+    <img src="img/reformanda.png" alt="Logo of a hand gripping a circle, a cross inscribed within the circle">
+</main>
+-->
+
+<main class="row border">
+
+    <div class="col-lg-4 col-md-6 card bg-dark">
+        <div class="card-body">
+            <p class="card-text text-start"><span class="fs-3 fw-lighter">In the beginning</span><br> was the <span style="font-variant:small-caps;">word</span>, and the <span style="font-variant:small-caps;">word</span> was with God, and the <span style="font-variant:small-caps;">word</span> was God.</p>
+            <p class="card-subtitle text-lead">John 1:1</p>
+        </div>
+    </div>
+
+    <div class="col-lg-4 col-md-6 card bg-light">
+        <div class="card-body">
+            <img src="img/strivenword.png" class="img-fluid" alt="A sword within an infinity symbol">
+        </div>
+    </div>
+
+    <div class="col-lg-4 col-md-6 card bg-dark">
+        <div class="card-body">
+            <p class="card-text"><b class="fw-bolder text-success">Death is lighter than a feather</b>, and <span class="text-danger"><em class="fst-italic">duty is heavier than a mountain</em></span>.</p>
+        </div>
+    </div>
+
+    <div class="col-lg-4 col-md-6 card bg-light">
+        <div class="card-body">
+            <img src="img/reformanda.png" class="img-fluid" alt="Logo of a hand gripping a circle, a cross inscribed within the circle">
+        </div>
+    </div>
+
 </main>
 
-  <footer class="mt-auto text-white-50">
-    <p>Soli Deo Gloria</p>
+
+</div> <!-- end main content wrapper -->
+
+  <footer class="footer mt-auto bg-light">
+    <p class="text-muted">Soli Deo Gloria</p>
   </footer>
-</div>
 
+</div> <!-- end header-footer wrapper -->
 
-    
-  
+<!-- Bootstrap JavaScript not needed for this page. -->
 
 </body>
 </html>
